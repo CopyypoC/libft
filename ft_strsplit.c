@@ -6,7 +6,7 @@
 /*   By: wiwang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 11:21:21 by wiwang            #+#    #+#             */
-/*   Updated: 2020/02/25 15:48:28 by wiwang           ###   ########.fr       */
+/*   Updated: 2020/02/27 13:49:49 by wiwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,14 @@ static	int		word_count(char const *s, char c)
 	return (wd);
 }
 
-static	char	**split_malloc(char const *s, char c, int words)
+static	char	**split_malloc(char const *s, char c, int words, char **split)
 {
-	char	**split;
 	int		chr;
 	int		i;
 	int		wd;
 
-	split = (char **)malloc(words * sizeof(char *));
+	if (!(split = (char **)malloc(words * sizeof(char *))))
+		return (NULL);
 	chr = 0;
 	i = 0;
 	wd = 0;
@@ -76,11 +76,11 @@ char			**ft_strsplit(char const *s, char c)
 	int		chr;
 	int		i;
 
+	split = NULL;
 	wd = 0;
 	chr = 0;
 	i = 0;
-	split = split_malloc(s, c, word_count(s, c));
-	if (split == NULL)
+	if (s == NULL || !(split = split_malloc(s, c, word_count(s, c), split)))
 		return (NULL);
 	while (s[i] != '\0')
 	{

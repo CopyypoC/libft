@@ -6,7 +6,7 @@
 /*   By: wiwang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 17:18:55 by wiwang            #+#    #+#             */
-/*   Updated: 2020/02/25 19:30:36 by wiwang           ###   ########.fr       */
+/*   Updated: 2020/02/27 13:55:11 by wiwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,26 @@ static void	num_append(int *i, char *s, int n)
 		s[(*i)++] = (char)(n + '0');
 }
 
+static	int	digit_size(int n)
+{
+	int size;
+
+	size = 0;
+	while (n != 0)
+	{
+		n = n / 10;
+		size++;
+	}
+	size = size + 2;
+	return (size);
+}
+
 char		*ft_itoa(int n)
 {
 	char	*s;
 	int		i;
 
-	s = (char *)malloc(12 * sizeof(char));
+	s = (char *)malloc(digit_size(n));
 	i = 0;
 	if (s == NULL)
 		return (NULL);

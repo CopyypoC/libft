@@ -6,7 +6,7 @@
 /*   By: wiwang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/23 12:30:29 by wiwang            #+#    #+#             */
-/*   Updated: 2020/02/23 12:33:13 by wiwang           ###   ########.fr       */
+/*   Updated: 2020/02/27 11:35:23 by wiwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_strclr(char *s)
 {
-	ft_bzero(s, ft_strlen(s));
+	if (s != NULL)
+		ft_bzero(s, ft_strlen(s));
 }

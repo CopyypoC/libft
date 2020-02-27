@@ -6,7 +6,7 @@
 /*   By: wiwang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 16:14:43 by wiwang            #+#    #+#             */
-/*   Updated: 2020/02/26 18:29:50 by wiwang           ###   ########.fr       */
+/*   Updated: 2020/02/27 11:50:07 by wiwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*sub;
 	size_t	i;
 
-	sub = (char *)malloc(ft_strlen(s) * sizeof(*s));
+	sub = (char *)malloc(len * sizeof(char) + 1);
 	i = 0;
 	if (sub == NULL)
 		return (NULL);
