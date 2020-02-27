@@ -6,7 +6,7 @@
 /*   By: wiwang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 14:07:46 by wiwang            #+#    #+#             */
-/*   Updated: 2020/02/26 19:01:48 by wiwang           ###   ########.fr       */
+/*   Updated: 2020/02/26 19:24:27 by wiwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,10 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	unsigned char		*target;
 	unsigned char		*copy;
 	size_t				i;
-	int					*nullptr;
 
 	target = (unsigned char *)dst;
 	copy = (unsigned char *)src;
 	i = 0;
-	nullptr = NULL;
 	while (i < n)
 	{
 		target[i] = copy[i];
@@ -30,5 +28,5 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 			return (dst + 1 + i);
 		i++;
 	}
-	return (nullptr);
+	return (NULL);
 }
