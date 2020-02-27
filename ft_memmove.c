@@ -6,7 +6,7 @@
 /*   By: wiwang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 16:27:46 by wiwang            #+#    #+#             */
-/*   Updated: 2020/02/26 19:32:10 by wiwang           ###   ########.fr       */
+/*   Updated: 2020/02/21 19:38:05 by wiwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char		*target;
-	char		*copy;
+	unsigned char		*target;
+	unsigned char		*copy;
 
 	target = (unsigned char *)dst;
 	copy = (unsigned char *)src;
