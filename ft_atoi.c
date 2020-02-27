@@ -6,13 +6,13 @@
 /*   By: wiwang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 16:15:52 by wiwang            #+#    #+#             */
-/*   Updated: 2020/02/26 20:53:14 by wiwang           ###   ########.fr       */
+/*   Updated: 2020/02/26 20:55:19 by wiwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int make_num(char *s, int i, long num, char sign)
+static	int	make_num(char *s, int i, long num, char sign)
 {
 	if (!((s[i] == '-') || (s[i] == '+')) &&
 		!((s[i + 1] >= '0') && (s[i + 1] <= '9')))
@@ -31,11 +31,11 @@ static	int make_num(char *s, int i, long num, char sign)
 		return (num);
 }
 
-int ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
 	char	*s;
 	int		i;
-	long	 num;
+	long	num;
 	char	sign;
 
 	s = (char *)str;
