@@ -6,7 +6,7 @@
 /*   By: wiwang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 18:15:52 by wiwang            #+#    #+#             */
-/*   Updated: 2020/02/27 18:35:10 by wiwang           ###   ########.fr       */
+/*   Updated: 2020/02/28 14:41:45 by wiwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 
 	cur = *alst;
 	tmp = *alst;
-	while (cur != NULL)
+	while (alst && del && cur)
 	{
 		cur = cur->next;
 		del(tmp->content, tmp->content_size);
