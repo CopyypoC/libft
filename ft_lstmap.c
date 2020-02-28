@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wiwang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 18:58:23 by wiwang            #+#    #+#             */
-/*   Updated: 2020/02/28 14:48:35 by wiwang           ###   ########.fr       */
+/*   Created: 2020/02/27 21:10:01 by wiwang            #+#    #+#             */
+/*   Updated: 2020/02/27 21:27:29 by wiwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd(t_list **alst, t_list *new)
+t_list *ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem))
 {
-	if (alst)
-		new->next = *alst;
-	*alst = new;
+	t_list *new;
+
+	while (lst != NULL)
+	{
+		new = ft_lstnew(lst->content, lst->content_size);
+		lst = f(lst);
+		new = lst;
+		lst = lst->next;
+	}
+	return (new);
 }
