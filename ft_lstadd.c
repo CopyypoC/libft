@@ -6,7 +6,7 @@
 /*   By: wiwang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 18:58:23 by wiwang            #+#    #+#             */
-/*   Updated: 2020/02/28 14:48:35 by wiwang           ###   ########.fr       */
+/*   Updated: 2020/02/28 14:53:21 by wiwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void ft_lstadd(t_list **alst, t_list *new)
 {
-	if (alst)
-		new->next = *alst;
+	if (!alst || !new)
+		return ;
+	new->next = *alst;
 	*alst = new;
 }
