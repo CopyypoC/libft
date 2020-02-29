@@ -6,13 +6,13 @@
 /*   By: wiwang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 20:59:42 by wiwang            #+#    #+#             */
-/*   Updated: 2020/02/28 14:49:56 by wiwang           ###   ########.fr       */
+/*   Updated: 2020/02/28 17:51:32 by wiwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
 	while (lst && f)
 	{

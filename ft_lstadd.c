@@ -6,13 +6,13 @@
 /*   By: wiwang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 18:58:23 by wiwang            #+#    #+#             */
-/*   Updated: 2020/02/28 14:53:21 by wiwang           ###   ########.fr       */
+/*   Updated: 2020/02/28 17:52:41 by wiwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd(t_list **alst, t_list *new)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
 	if (!alst || !new)
 		return ;
