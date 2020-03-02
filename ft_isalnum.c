@@ -6,7 +6,7 @@
 /*   By: wiwang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 20:08:12 by wiwang            #+#    #+#             */
-/*   Updated: 2020/02/22 20:11:10 by wiwang           ###   ########.fr       */
+/*   Updated: 2020/03/02 13:07:43 by wiwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha(c) == 1 || ft_isdigit(c) == 1)
-		return (1);
-	else
-		return (0);
+	return (ft_isalpha(c) == 1 || ft_isdigit(c) == 1 ? 1 : 0);
 }

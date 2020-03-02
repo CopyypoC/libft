@@ -6,7 +6,7 @@
 /*   By: wiwang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 21:32:13 by wiwang            #+#    #+#             */
-/*   Updated: 2020/02/29 20:42:53 by wiwang           ###   ########.fr       */
+/*   Updated: 2020/03/01 14:36:23 by wiwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,6 @@ int					ft_islower(int c);
 int					ft_isupper(int c);
 int					ft_isspace(int c);
 int					ft_str_is_alpha(char *s);
+int					ft_str_is_numeric(char *s);
 
 #endif

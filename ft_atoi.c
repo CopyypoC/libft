@@ -6,7 +6,7 @@
 /*   By: wiwang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 16:15:52 by wiwang            #+#    #+#             */
-/*   Updated: 2020/02/26 22:18:15 by wiwang           ###   ########.fr       */
+/*   Updated: 2020/03/02 13:04:25 by wiwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static	int	make_num(char *s, int i, long num, char sign)
 		i++;
 	while (s[i] >= '0' && s[i] <= '9')
 		num = (num * 10) + (s[i++] - '0');
-	if (num < 0 && sign == '\0')
+	if (num < 0 && sign == '+')
 		return (-1);
 	if (num < 0 && sign == '-')
 		return (0);
@@ -40,7 +40,7 @@ int			ft_atoi(const char *str)
 	s = (char *)str;
 	i = 0;
 	num = 0;
-	sign = '\0';
+	sign = '+';
 	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s[i] == '\v' ||
 			s[i] == '\r' || s[i] == '\f')
 		i++;

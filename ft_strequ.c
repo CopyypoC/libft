@@ -6,7 +6,7 @@
 /*   By: wiwang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 16:09:09 by wiwang            #+#    #+#             */
-/*   Updated: 2020/02/24 16:11:54 by wiwang           ###   ########.fr       */
+/*   Updated: 2020/03/02 13:27:47 by wiwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	if (ft_strcmp(s1, s2) != 0)
-		return (0);
-	else
-		return (1);
+	return (ft_strcmp(s1, s2) == 0 ? 1 : 0);
 }

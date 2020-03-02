@@ -6,7 +6,7 @@
 /*   By: wiwang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/23 14:40:30 by wiwang            #+#    #+#             */
-/*   Updated: 2020/02/26 16:01:22 by wiwang           ###   ########.fr       */
+/*   Updated: 2020/03/02 13:52:44 by wiwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,3 @@ void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-
-#ifdef TEST
-
-int		main(void)
-{
-	ft_putchar('a');
-	printf("\n");
-	return (0);
-}
-
-#endif

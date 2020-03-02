@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wiwang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/24 16:12:17 by wiwang            #+#    #+#             */
-/*   Updated: 2020/03/02 13:28:28 by wiwang           ###   ########.fr       */
+/*   Created: 2020/03/01 14:29:43 by wiwang            #+#    #+#             */
+/*   Updated: 2020/03/01 14:34:52 by wiwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strnequ(char const *s1, char const *s2, size_t n)
+int	ft_str_is_numeric(char *s)
 {
-	return (ft_strncmp(s1, s2, n) == 0 ? 1 : 0);
+	int i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (!(s[i] >= '0' && s[i] <= '9'))
+			return (0);
+		i++;
+	}
+	return (1);
 }
