@@ -78,7 +78,7 @@ ft_toupper.c
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME) libft.h
-	
+
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $^
 	@ranlib $(NAME)
@@ -86,11 +86,11 @@ $(NAME): $(OBJ)
 %.o: %.c
 	@gcc $(FLAGS) -c $< -o $@
 
-oclean:
-	@rm -f *.o
+bclean:
+	@rm -f *\~ *\#
 
 clean:
-	@rm -f *~ *\#
+	@rm -f *.o
 
 fclean: clean
 	@rm -f $(NAME)
